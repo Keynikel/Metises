@@ -1,0 +1,23 @@
+// В этом файле должны быть стили для БЭМ-блока button, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.button {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  box-sizing: border-box;
+  max-width: 280px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  background-color: $warning-color;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+}

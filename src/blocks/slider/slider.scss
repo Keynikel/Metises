@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.slider {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-bottom: 40px;
+  background-color: rgba(243, 243, 243, 0.5);
+
+  &__img {
+    img {
+      min-height: 230px;
+    }
+  }
+
+  &__wrapper {
+    padding: 35px 20px 40px;
+  }
+
+  &__header {
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &__lead {
+    margin-bottom: 30px;
+  }
+
+  .slick-dots {
+    bottom: 28px;
+  }
+
+  .slick-dots li,
+  .slick-dots li button {
+    width: 7px;
+  }
+
+
+  .slick-dots li button:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #DCDCDC;
+    opacity: 1;
+  }
+
+  .slick-dots li.slick-active button:before {
+    background-color: $warning-color;
+    opacity: 1;
+  }
+
+}
