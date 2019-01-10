@@ -7,6 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   padding-bottom: 40px;
+  margin-bottom: 37px;
   background-color: rgba(243, 243, 243, 0.5);
 
   &__img {
@@ -29,6 +30,7 @@
   &__lead {
     margin-bottom: 30px;
   }
+
 
   .slick-dots {
     bottom: 28px;
