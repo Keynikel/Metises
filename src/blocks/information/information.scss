@@ -1,9 +1,33 @@
-// В этом файле должны быть стили для БЭМ-блока information, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока information, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .information {
 
   $block-name:                &; // #{$block-name}__element
+
+  padding: 50px 20px 60px;
+
+  &__header {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    img {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__lead {
+
+    margin-bottom: 35px;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
 
 }

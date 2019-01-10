@@ -1,9 +1,12 @@
-// В этом файле должны быть стили для БЭМ-блока form-request, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока form-request, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .form-request {
 
   $block-name:                &; // #{$block-name}__element
+
+  background-color: #F9F9F9;
+  height: 550px;
 
 }
