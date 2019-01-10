@@ -1,2 +1,12 @@
 mixin form-consult()
-  div form-consult
+  section.form-consult
+    h3.form-consult__header Получить консультацию
+    p.form-consult__lead Оставьте контактные данные, и наш менеджер свяжется с вами в ближайшее время!
+    form.form-consult__body
+      p.form-consult__item
+        label.form-consult__label.visually-hidden(for='user-name') Представьтесь
+        input.form-consult__name(type='text' id='user-name' name='user-name' placeholder='Представьтесь')
+      p.form-consult__item
+        label.form-consult__label.visually-hidden(for='user-phone') Телефон
+        input.form-consult__phone(type='tel' id='user-phone' name='user-phone' placeholder='Телефон')
+      input.form-consult__button.button(type='submit' value='Отправить')
