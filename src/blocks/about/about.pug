@@ -1,2 +1,11 @@
-mixin about()
-  div about
+mixin about(type)
+  section.about
+    h3.about__header О компании
+    - var src = "/img/about_" + type;
+    picture.about__img
+      source(srcset = src + '--xs.webp' type='image/webp')
+      img(src= src + '--xs.jpg')
+    div.about__lead
+      p Постоянно работаем над собой  и улучшаем качество взаимодействия с  партнерами: отточили логистику, контролируем производство  и предоставляем техническую документацию на все товары.
+      p Выстраиваем долгие и теплые отношения с клиентами — это позволяет держать цены на доступном уровне и делать скидки на большие заказы.
+    a.about__button.button(href="#") Подробнее
