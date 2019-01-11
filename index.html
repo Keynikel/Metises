@@ -4,41 +4,143 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home</title>
-  <meta name="description" content="Home page!">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:500,600|Roboto:400,500&amp;amp;subset=cyrillic" rel="stylesheet">
+  <title>Метиз Энерго сервис</title>
+  <meta name="Метиз Энерго сервис" content="">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-  <script>
-    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-  </script>
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+</script>
 </head>
 
 <body>
-  <div class="page__inner">
-    <div class="page__content">
-      <div>Тут «шапка»<nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="/home" title="Home">Home</a></li>
-            <li class="main-nav__item  main-nav__item--active"><a href="/blog" title="Blog">Blog</a></li>
-            <li class="main-nav__item"><a href="/contact" title="Contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <p>Растровые спрайты:<span class="chrome" style="display: inline-block;"></span><span class="github-logo" style="display: inline-block;"></span><span class="placeholder" style="display: inline-block;"></span></p>
-      <hr>
-      <p>Векторные спрайты<svg width="24" height="24">
-          <use xlink:href="img/sprite-svg.svg#loupe"></use>
-        </svg><svg width="24" height="24">
-          <use xlink:href="img/sprite-svg.svg#rgb"></use>
-        </svg><svg width="24" height="24">
-          <use xlink:href="img/sprite-svg.svg#tea-cup"></use>
-        </svg></p>
+  <section class="header"><button>Menu</button><a class="header__wrapper header__wrapper" href="/index.html"><svg class="header__logo" width="120" height="47"><use xlink:href="img/sprite-svg.svg#logo"></use></svg></a><button>Search</button></section>
+  <section class="slider">
+    <div class="slider__item">
+      <picture class="slider__img">
+        <source srcset="/img/main-1--xs.webp" type="image/webp" /><img src="/img/main-1--xs.jpg"/></picture>
+        <div class="slider__wrapper">
+          <h2 class="slider__header">Рым-болт для такелажных работ</h2>
+          <p class="slider__lead">Высокопрочный оцинкованный рым-болт DIN 580 для всех видов такелажных работ.</p><a class="button slider__button" href="#">Смотреть каталог</a>
+        </div>
     </div>
-    <div class="page__footer-wrapper">
-      <div>Тут «подвал»</div>
+    <div class="slider__item">
+      <picture class="slider__img"><img src="/img/main-1--xs.jpg"/></picture>
+        <div class="slider__wrapper">
+          <h2 class="slider__header">ШУРУП ДЛЯ СТРОЙКИ И МОНТАЖА</h2>
+          <p class="slider__lead">Высокопрочный оцинкованный шуруп  DIN 97 с плоской головкой.</p><a class="button slider__button" href="#">Смотреть каталог</a>
+        </div>
     </div>
-  </div>
-  <script src="js/script.min.js"></script>
+    <div class="slider__item">
+      <picture class="slider__img"><img src="/img/main-1--xs.jpg"/></picture>
+        <div class="slider__wrapper">
+          <h2 class="slider__header">БОЛТ ДЛЯ ПРОИЗВОДСТВА</h2>
+          <p class="slider__lead">Качественный болт с шестигранной головкой и полной резьбой DIN 933.</p><a class="button slider__button" href="#">Смотреть каталог</a>
+        </div>
+    </div>
+  </section>
+  <section class="catalog">
+    <h3 class="catalog__header">Каталог продукции</h3>
+    <ul class="catalog__list">
+      <li class="catalog__item"><svg class="catalog__logo catalog__logo--anker" width="40" height="25">
+          <use xlink:href="img/sprite-svg.svg#bolts"></use>
+        </svg><a class="catalog__title" href="#">Анкеры</a></li>
+      <li class="catalog__item"><svg class="catalog__logo catalog__logo--bolts" width="40" height="25">
+          <use xlink:href="img/sprite-svg.svg#bolts"></use>
+        </svg><a class="catalog__title" href="#">Болты</a></li>
+      <li class="catalog__item"><svg class="catalog__logo catalog__logo--vints" width="40" height="25">
+          <use xlink:href="img/sprite-svg.svg#vints"></use>
+        </svg><a class="catalog__title" href="#">Винты</a></li>
+      <li class="catalog__item"><svg class="catalog__logo catalog__logo--gaika" width="40" height="25">
+          <use xlink:href="img/sprite-svg.svg#gaika"></use>
+        </svg><a class="catalog__title" href="#">Гайки</a></li>
+    </ul>
+  </section>
+  <section class="form-consult">
+    <h3 class="form-consult__header">Получить консультацию</h3>
+    <p class="form-consult__lead">Оставьте контактные данные, и наш менеджер свяжется с вами в ближайшее время!</p>
+    <form class="form-consult__body">
+      <p class="form-consult__item"><label class="form-consult__label visually-hidden" for="user-name">Представьтесь</label><input class="form-consult__name" type="text" id="user-name" name="user-name" placeholder="Представьтесь"/></p>
+        <p class="form-consult__item"><label class="form-consult__label visually-hidden" for="user-phone">Телефон</label><input class="form-consult__phone" type="tel" id="user-phone" name="user-phone" placeholder="Телефон"/></p><input class="form-consult__button button" type="submit" value="Отправить"/></form>
+  </section>
+  <section class="information">
+    <h3 class="information__header">СОБСТВЕННОЕ ПРОИЗВОДСТВО</h3>
+    <picture class="information__img">
+      <source srcset="/img/development.webp" type="image/webp" /><img src="/img/development.jpg"/></picture>
+      <div class="information__lead">
+        <p>Производим десятки разновидностей крепежа и метизов. Специалисты компании изучают новые технологии  и отслеживают изменения покупательского спроса.</p>
+        <p>Ассортимент постоянно расширяется и пополняется актуальными позициями.</p>
+      </div><a class="information__button button" href="#">Подробнее</a>
+  </section>
+  <section class="form-request">
+    <h3 class="form-request__header">Оформить заявку</h3>
+    <form class="form-requset__body">
+      <p class="form-request__item"><label class="form-request__label visually-hidden" for="request-name">Представьтесь</label><input class="form-request__name" type="text" name="request-name" id="request-name" placeholder="Представьтесь"/></p>
+        <p class="form-request__item"><label class="form-request__label visually-hidden" for="request-mail">Эл. почта</label><input class="form-request__mail" type="email" name="request-mail" id="request-mail" placeholder="Эл. почта"/></p>
+          <p class="form-request__item"><label class="form-request__label visually-hidden" for="request-message">Детали заявки</label><textarea class="form-request__message" name="request-message" id="request-message" placeholder="Детали заявки"></textarea></p>
+          <p class="form-request__item"><label class="form-request__label" for="request-files"><svg class="form-request__clip" width="12" height="12"><use xlink:href="img/sprite-svg.svg#clip"></use></svg><span class="form-request__text"> Прикрепить файлы</span></label><input class="form-request__file visually-hidden" type="file" multiple="multiple" name="request-files" id="request-files" placeholder="Прикрепить файлы"/></p>
+            <p class="form-request__item"><input class="form-request__check" type="checkbox" name="request-agree" id="request-agree"/><label class="form-request__agree" for="request-agree">Принимаю соглашение об использовании персональных данных</label></p><input class="form-request__button button" type="submit" value="Отправить"/></form>
+  </section>
+  <section class="advantages">
+    <h3 class="advantages__header">Преимущества</h3>
+    <ul class="advantages__list">
+      <li class="advantages__item">
+        <h4 class="advantages__title">Оперативность</h4>
+        <p class="advantages__lead">Обработка заказа в течение часа. Проконсультируем по каталогу продукции, условиям работы  и срокам доставки.</p>
+      </li>
+      <li class="advantages__item">
+        <h4 class="advantages__title">Система скидок</h4>
+        <p class="advantages__lead">Программа лояльности  для постоянных оптовых клиентов.</p>
+      </li>
+      <li class="advantages__item">
+        <h4 class="advantages__title">Быстрая доставка</h4>
+        <p class="advantages__lead">По Санкт-Петербургу и пригороду бесплатная доставка от 4 000 р. Доставка по России от 30 000 р. </p>
+      </li>
+      <li class="advantages__item">
+        <h4 class="advantages__title">Гарантия качества</h4>
+        <p class="advantages__lead">Вся продукция сертифицирована и соответствует стандартам ГОСТ и DIN.</p>
+      </li>
+    </ul>
+  </section>
+  <section class="about">
+    <h3 class="about__header">О компании</h3>
+    <picture class="about__img">
+      <source srcset="/img/about_main--xs.webp" type="image/webp" /><img src="/img/about_main--xs.jpg"/></picture>
+      <div class="about__lead">
+        <p>Постоянно работаем над собой  и улучшаем качество взаимодействия с партнерами: отточили логистику, контролируем производство  и предоставляем техническую документацию на все товары.</p>
+        <p>Выстраиваем долгие и теплые отношения с клиентами — это позволяет держать цены на доступном уровне и делать скидки на большие заказы.</p>
+      </div><a class="about__button button" href="#">Подробнее</a>
+  </section>
+  <section class="contacts">
+    <h3 class="contacts__header">Контакты</h3>
+    <p class="contacts__lead">Если у вас есть запрос на поставку продукции, деловое предложение или вопрос, напишите нам, позвоните или заполните форму обратной связи. </p>
+    <ul class="contacts__list">
+      <li class="contacts__item">
+        <h4 class="contacts__title">Адрес</h4><span class="contacts__text">603089, г. Санкт-Петербург, ул. Гаражная,  д.19, оф. 319</span>
+      </li>
+      <li class="contacts__item">
+        <h4 class="contacts__title">ТЕЛЕФОН</h4><span class="contacts__text"><a href="tel:+78124073690">8 (812) 407 36 90</a></span><span class="contacts__text"><a href="tel:+78124085590">8 (812) 408 55 90</a></span>
+      </li>
+      <li class="contacts__item">
+        <h4 class="contacts__title">ЭЛ. ПОЧТА</h4><span class="contacts__text"><a href="mailto:zakaz@metiz-service.ru">zakaz@metiz-service.ru</a></span><span class="contacts__text"><a href="mailto:info@metiz-service.ru">info@metiz-service.ru</a></span>
+      </li>
+    </ul>
+    <div class="contacts__feedback">
+      <section class="form-feedback">
+        <h3 class="form-feedback__header">ОБРАТНАЯ СВЯЗЬ</h3>
+        <form class="form-requset__body">
+          <p class="form-feedback__item"><label class="form-feedback__label visually-hidden" for="feedback-name">Представьтесь</label><input class="form-feedback__name" type="text" name="feedback-name" id="feedback-name" placeholder="Представьтесь"/></p>
+            <p class="form-feedback__item"><label class="form-feedback__label visually-hidden" for="feedback-phone">Телефон</label><input class="form-feedback__phone" type="tel" name="feedback-phone" id="feedback-phone" placeholder="Телефон"/></p>
+              <p class="form-feedback__item"><label class="form-feedback__label visually-hidden" for="feedback-mail">Эл. почта</label><input class="form-feedback__mail" type="email" name="feedback-mail" id="feedback-mail" placeholder="Эл. почта"/></p>
+                <p class="form-feedback__item"><label class="form-feedback__label visually-hidden" for="feedback-message">Детали заявки</label><textarea class="form-feedback__message" name="feedback-message" id="feedback-message" placeholder="Сообщение или вопрос"></textarea></p>
+                <p class="form-feedback__item"><label class="form-feedback__label" for="feedback-files"><svg class="form-feedback__clip" width="12" height="12"><use xlink:href="img/sprite-svg.svg#clip"></use></svg><span class="form-feedback__text"> Прикрепить файлы</span></label><input class="form-feedback__file visually-hidden" type="file" multiple="multiple" name="feedback-files" id="feedback-files" placeholder="Прикрепить файлы"/></p>
+                  <p class="form-feedback__item"><input class="form-feedback__check" type="checkbox" name="feedback-agree" id="feedback-agree"/><label class="form-feedback__agree" for="feedback-agree">Принимаю соглашение об использовании персональных данных</label></p><input class="form-feedback__button button" type="submit" value="Отправить"/></form>
+      </section>
+    </div>
+  </section>
+  <div>footer</div>
+  <script src="/js/script.min.js"></script>
 </body>
 
 </html>
