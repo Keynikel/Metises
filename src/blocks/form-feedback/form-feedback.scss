@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока form-feedback, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока form-feedback, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,108 @@
 
   $block-name:                &; // #{$block-name}__element
 
-}
+    padding: 22px 0 0;
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+
+    &__header {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+
+      &:nth-of-type(4) {
+        margin-bottom: 25px; // другой нижний отступ перед прикреплением файла
+      }
+
+      &:nth-of-type(5) {
+        margin-bottom: 34px; // другой нижний отступ перед прикреплением файла
+      }
+
+      &:last-of-type {
+        margin-bottom: 28px; // другой нижний отступ перед  согласием
+      }
+
+    }
+
+    &__name,
+    &__phone,
+    &__mail {
+      width: 100%;
+      padding: 4px 14px 4px 18px;
+      font-size: 13px;
+      line-height: 30px;
+    }
+
+    &__message {
+      width: 100%;
+      height: 120px;
+      resize: none;
+      padding-left: 15px;
+      font-size: 13px;
+      line-height: 28px;
+    }
+
+    &__clip {
+      margin-right: 3px;
+    }
+
+    &__text {
+      font-size: 13px;
+      line-height: 25px;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    &__check {
+      display: none;
+    }
+
+    &__agree {
+      position: relative;
+      display: block;
+      padding-left: 30px;
+      font-size: 10px;
+      line-height: 10px;
+      color: #4D4D4D;
+
+      a {
+        color: #4D4D4D;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+      }
+    }
+
+    &__check:checked + &__agree::before {
+      background-color: $warning-color;
+    }
+
+    &__check:checked + &__agree::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 3px;
+      width: 15px;
+      height: 11px;
+      background-image: url(../img/check.svg);
+      background-size: contain;
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+  }

@@ -1,2 +1,22 @@
 mixin contacts()
-  div contacts
+  section.contacts
+    h3.contacts__header Контакты
+    p.contacts__lead Если у вас есть запрос на поставку продукции, деловое предложение или вопрос, напишите нам, позвоните или заполните форму обратной связи. 
+    ul.contacts__list
+      li.contacts__item
+        h4.contacts__title Адрес
+        span.contacts__text 603089, г. Санкт-Петербург, ул. Гаражная,  д.19, оф. 319
+      li.contacts__item
+        h4.contacts__title ТЕЛЕФОН
+        span.contacts__text
+          a(href='tel:+78124073690') 8 (812) 407 36 90
+        span.contacts__text
+          a(href='tel:+78124085590') 8 (812) 408 55 90
+      li.contacts__item
+        h4.contacts__title ЭЛ. ПОЧТА
+        span.contacts__text
+          a(href='mailto:zakaz@metiz-service.ru') zakaz@metiz-service.ru
+        span.contacts__text
+          a(href='mailto:info@metiz-service.ru') info@metiz-service.ru
+    div.contacts__feedback
+      +form-feedback()

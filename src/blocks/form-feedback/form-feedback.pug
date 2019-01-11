@@ -1,2 +1,26 @@
 mixin form-feedback()
-  div form-feedback
+  section.form-feedback
+    h3.form-feedback__header ОБРАТНАЯ СВЯЗЬ
+    form.form-requset__body
+      p.form-feedback__item
+        label.form-feedback__label.visually-hidden(for='feedback-name') Представьтесь
+        input.form-feedback__name(type='text' name='feedback-name' id='feedback-name' placeholder='Представьтесь')
+      p.form-feedback__item
+        label.form-feedback__label.visually-hidden(for='feedback-phone') Телефон
+        input.form-feedback__phone(type='tel' name='feedback-phone' id='feedback-phone' placeholder='Телефон')
+      p.form-feedback__item
+        label.form-feedback__label.visually-hidden(for='feedback-mail') Эл. почта
+        input.form-feedback__mail(type='email' name='feedback-mail' id='feedback-mail' placeholder='Эл. почта')
+      p.form-feedback__item
+        label.form-feedback__label.visually-hidden(for='feedback-message') Детали заявки
+        textarea.form-feedback__message( name='feedback-message' id='feedback-message' placeholder='Сообщение или вопрос')
+      p.form-feedback__item
+        label.form-feedback__label(for='feedback-files')
+          svg.form-feedback__clip(width="12", height="12")
+            use(xlink:href="img/sprite-svg.svg#clip")
+          span.form-feedback__text  Прикрепить файлы
+        input.form-feedback__file.visually-hidden(type='file' multiple name='feedback-files' id='feedback-files' placeholder='Прикрепить файлы')
+      p.form-feedback__item
+        input.form-feedback__check(type='checkbox' name='feedback-agree' id='feedback-agree')
+        label.form-feedback__agree(for='feedback-agree') Принимаю соглашение об использовании персональных данных
+      input.form-feedback__button.button(type='submit' value='Отправить')
