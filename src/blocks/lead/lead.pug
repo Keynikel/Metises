@@ -1,0 +1,8 @@
+mixin lead(title, type, text)
+  section.lead
+    h2.lead__header #{title}
+    - var src = "img/lead__" + type;
+    picture.lead__img
+      source(srcset = src + '--xs.webp' type='image/webp')
+      img(src= src + '--xs.jpg')
+    div.lead__text !{text}

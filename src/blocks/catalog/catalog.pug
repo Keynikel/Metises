@@ -2,20 +2,20 @@ mixin catalog(header)
   section.catalog
     if (header)
       h3.catalog__header #{header}
-      ul.catalog__list
-        li.catalog__item
-          svg.catalog__logo.catalog__logo--anker(width="40", height="25")
-            use(xlink:href="img/sprite-svg.svg#bolts")
-          a.catalog__title(href="#") Анкеры
-        li.catalog__item
-          svg.catalog__logo.catalog__logo--bolts(width="40", height="25")
-            use(xlink:href="img/sprite-svg.svg#bolts")
-          a.catalog__title(href="#") Болты
-        li.catalog__item
-          svg.catalog__logo.catalog__logo--vints(width="40", height="25")
-            use(xlink:href="img/sprite-svg.svg#vints")
-          a.catalog__title(href="#") Винты
-        li.catalog__item
-          svg.catalog__logo.catalog__logo--gaika(width="40", height="25")
-            use(xlink:href="img/sprite-svg.svg#gaika")
-          a.catalog__title(href="#") Гайки
+    ul.catalog__list
+      li.catalog__item
+        svg.catalog__logo.catalog__logo--anker(width="40", height="25")
+          use(xlink:href="img/sprite-svg.svg#bolts")
+        a.catalog__title(href="#") Анкеры
+      li.catalog__item
+        svg.catalog__logo.catalog__logo--bolts(width="40", height="25")
+          use(xlink:href="img/sprite-svg.svg#bolts")
+        a.catalog__title(href="#") Болты
+      li.catalog__item
+        svg.catalog__logo.catalog__logo--vints(width="40", height="25")
+          use(xlink:href="img/sprite-svg.svg#vints")
+        a.catalog__title(href="#") Винты
+      li.catalog__item
+        svg.catalog__logo.catalog__logo--gaika(width="40", height="25")
+          use(xlink:href="img/sprite-svg.svg#gaika")
+        a.catalog__title(href="#") Гайки
