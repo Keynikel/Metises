@@ -1,3 +1,17 @@
 mixin footer()
-  div footer
-  script(src='/js/script.min.js')
+  section.footer
+    a.footer__wrapper(href='/index.html')
+        svg.footer__logo(width="120", height="50")
+          use(xlink:href="img/sprite-svg.svg#logo")
+    ul.footer__info
+      li.footer__item
+        a.footer__phone(href='tel:+78124073690') 8 (812) 407 36 90
+        a.footer__email(href='mailto: metiz@service.ru') metiz@service.ru
+    p.footer__copy © 2018 «Метизэнерго сервис» Все права защищены
+    a.footer__link(href='#') Политика конфиденциальности
+    p.footer__masters Разработка и внедрение —
+      a(href='#')
+        svg.footer__logo(width="60", height="15")
+          use(xlink:href="img/sprite-svg.svg#mediabay")
+
+  script(src='js/script.min.js')
