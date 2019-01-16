@@ -1,0 +1,19 @@
+extends templates/layout-home.pug
+
+block meta
+  title Метиз Энерго сервис
+  meta(name='Метиз Энерго сервис', content='')
+
+block header
+  +header()
+
+block page
+
+  +lead('Винты', 'category_vints', '<p>Винты — основной вид крепежа, который можно легко отличить по наличию резьбы и головки. </p><p>В стоительстве и технике винты используют для соединения деталей и фиксации частей относительно друг друга перед сборкой.</p>')
+  +category()
+  +form-consult()
+  +form-request()
+
+
+block footer
+  +footer()

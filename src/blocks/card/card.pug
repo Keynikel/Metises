@@ -1,0 +1,7 @@
+mixin card(header, img, subtitle)
+  a.card(href='')
+    - var src = "img/" + img;
+    div.card__wrapper
+      img.card__img(src= src + '.png')
+    h3.card__header #{header}
+    p.card__subtitle #{subtitle}
