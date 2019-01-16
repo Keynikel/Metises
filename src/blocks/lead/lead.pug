@@ -1,5 +1,5 @@
 mixin lead(title, type, text)
-  section.lead
+  section.lead(class = 'lead--' + type)
     h2.lead__header #{title}
     - var src = "img/lead__" + type;
     picture.lead__img

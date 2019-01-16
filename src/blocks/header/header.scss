@@ -6,7 +6,8 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  position: relative;
   height: 80px;
   box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.08);
-
+  z-index: 1;
 }

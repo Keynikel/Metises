@@ -1,10 +1,10 @@
-mixin information()
-  section.information
-    h3.information__header СОБСТВЕННОЕ ПРОИЗВОДСТВО
+mixin information(header, type, img, text)
+  section.information(class='information--' + type)
+    h3.information__header #{header}
+    - var src = "img/info__" + type;
     picture.information__img
-      source(srcset='/img/development.webp' type='image/webp')
-      img(src='/img/development.jpg')
-    div.information__lead
-      p Производим десятки разновидностей крепежа и метизов. Специалисты компании изучают новые технологии  и отслеживают изменения покупательского спроса.
-      p Ассортимент постоянно расширяется и пополняется актуальными позициями.
-    a.information__button.button(href="#") Подробнее
+      source(srcset = src + '--xs.webp' type='image/webp')
+      img(src= src + '--xs.jpg')
+    div.information__lead !{text}
+    if (type == 'main')
+      a.information__button.button(href="#") Подробнее

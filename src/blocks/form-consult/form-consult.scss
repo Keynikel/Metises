@@ -9,6 +9,15 @@
   padding: 40px 20px 50px;
   background-color: $main-color;
 
+  &--white {
+    background-color: #fff;
+
+    #{$block-name}__name,
+    #{$block-name}__phone {
+      border: 1px solid #E7E7E7;
+    }
+  }
+
   &__header {
     margin-bottom: 6px;
     font-size: 15px;

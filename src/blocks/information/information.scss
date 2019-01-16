@@ -8,10 +8,25 @@
 
   padding: 50px 20px 60px;
 
+  &--production {
+    padding-top: 65px;
+    padding-bottom: 20px;
+    background-color: rgba(243, 243, 243, 0.5);
+    background-image: url('../img/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    #{$block-name}__img {
+      img {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
   &__header {
     margin-bottom: 30px;
     font-size: 18px;
-    line-height: 20px;
+    line-height: 27px;
     text-transform: uppercase;
   }
 
