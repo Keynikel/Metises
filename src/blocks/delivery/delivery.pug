@@ -12,5 +12,6 @@ mixin delivery()
     div.delivery__wrapper
       h3.delivery__subheader ДОСТАВКА В РЕГИОНЫ
       p.delivety__lead Сотрудничаем только с надежными перевозчиками — это обеспечивает высокое качество доставки. После оформления заказа менеджер свяжется с вами, чтобы подобрать компанию, уточнить сроки и согласовать стоимость.
-      iframe( src="https://widgets.dellin.ru/calculator/?derival_to_door=on&arrival_to_door=off&disabled_calculation=off&insurance=0&package=1" width="332" height="370" scrolling="no" frameborder="0")
+      div.delivery__frame-container
+        iframe( src="https://widgets.dellin.ru/calculator/?derival_to_door=on&arrival_to_door=off&disabled_calculation=off&insurance=0&package=1" width="332" height="370" scrolling="no" frameborder="0")
 </iframe>

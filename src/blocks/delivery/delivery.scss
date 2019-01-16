@@ -61,7 +61,7 @@
     margin-left: -20px;
     margin-right: -20px;
     background-color: #F9F9F9;
-    padding: 50px 20px 0;
+    padding: 50px 20px 40px;
   }
 
   &__subheader {
@@ -70,5 +70,10 @@
     line-height: 25px;
     font-weight: 600;
   }
+
+  &__frame-container {
+    margin-top: 40px;
+  }
+
 
 }
