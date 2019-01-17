@@ -14,12 +14,35 @@
     color: rgba(0, 0, 0, 0.7);
   }
 
+  &--white {
+    background-color: #fff;
+
+    #{$block-name}__name,
+    #{$block-name}__mail,
+    #{$block-name}__message {
+      border: 1px solid #E7E7E7;
+    }
+  }
+
+  &--striped {
+    background-image: url('../img/back-small.png');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+
 
   &__header {
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
+  }
+
+  &__lead {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   &__item {

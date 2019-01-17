@@ -1,7 +1,13 @@
-mixin contacts()
-  section.contacts
-    h3.contacts__header Контакты
-    p.contacts__lead Если у вас есть запрос на поставку продукции, деловое предложение или вопрос, напишите нам, позвоните или заполните форму обратной связи. 
+mixin contacts(type)
+  section.contacts(class='contacts--' + type)
+    if (type == 'main')
+      h3.contacts__header Контакты
+      p.contacts__lead Если у вас есть запрос на поставку продукции, деловое предложение или вопрос, напишите нам, позвоните или заполните форму обратной связи. 
+    else
+      h2.contacts__header Контакты
+      picture.contacts__map
+        source(srcset = 'img/map--xs.webp' type='image/webp')
+        img(src= 'img/map--xs.jpg')
     ul.contacts__list
       li.contacts__item
         h4.contacts__title Адрес
@@ -18,5 +24,6 @@ mixin contacts()
           a(href='mailto:zakaz@metiz-service.ru') zakaz@metiz-service.ru
         span.contacts__text
           a(href='mailto:info@metiz-service.ru') info@metiz-service.ru
-    div.contacts__feedback
-      +form-feedback()
+    if (type == 'main')
+      div.contacts__feedback
+        +form-feedback()

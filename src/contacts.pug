@@ -1,0 +1,15 @@
+extends templates/layout-home.pug
+
+block meta
+  title Метиз Энерго сервис
+  meta(name='Метиз Энерго сервис', content='')
+
+block header
+  +header()
+
+block page
+  +contacts('page')
+  +form-request('Обратная связь', 'striped')
+
+block footer
+  +footer()

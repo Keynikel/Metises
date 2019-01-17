@@ -1,6 +1,9 @@
-mixin form-request()
-  section.form-request
+mixin form-request(header, type)
+  section.form-request(class= 'form-request--' + type)
     h3.form-request__header Оформить заявку
+    if(type = 'stryped')
+      p.form-request__lead  Если у вас есть запрос на поставку продукции, деловое предложение или вопрос, напишите нам, позвоните или заполните форму обратной связи. 
+
     form.form-requset__body
       p.form-request__item
         label.form-request__label.visually-hidden(for='request-name') Представьтесь

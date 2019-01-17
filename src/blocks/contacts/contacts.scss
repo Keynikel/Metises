@@ -9,6 +9,11 @@
   padding: 43px 20px 60px;
   background-color: $gray-light;
 
+  &--page {
+    padding-bottom: 36px;
+    background-color: #fff;
+  }
+
   &__header {
     margin-bottom: 20px;
     font-size: 23px;
@@ -19,6 +24,10 @@
 
   &__lead {
     margin-bottom: 15px;
+  }
+
+  &__map img{
+    margin-bottom: 20px;
   }
 
   &__list {
