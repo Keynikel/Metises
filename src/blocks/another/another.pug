@@ -1,2 +1,8 @@
 mixin another()
-  div another
+  section.another
+    h3.another__header Похожие товары
+    ul.another__list
+      li.another__item
+        +card('DIN 316', 'din-316', 'Винт-барашек c округленными лепестками')
+      li.another__item
+        +card('DIN 417', 'din-316', 'Винт установочный цилиндрическим концом')
