@@ -1,9 +1,80 @@
-// В этом файле должны быть стили для БЭМ-блока calculate, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока calculate, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .calculate {
 
   $block-name:                &; // #{$block-name}__element
+
+  margin-top: -10px;
+  //padding: 30px 20px;
+  padding: 18px;
+  background-color: #F9F9F9;
+
+  &__body {
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__type {
+    margin-bottom: 11px;
+
+    select,
+    input {
+      width: 100%;
+      padding: 6px 5px 5px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 0;
+      background-color: #fff;
+      font-size: 12px;
+    }
+  }
+
+  &__label {
+    font-size: 8px;
+    line-height: 27px;
+    color: #767676;
+    text-transform: uppercase;
+  }
+
+  &__add {
+    position: relative;
+    padding-left: 17px;
+    font-size: 9px;
+    line-height: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 10px;
+      height: 10px;
+      background-image: url(../img/add.svg);
+      background-size: 10px 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__result {
+    padding: 38px 2px 16px;
+    border-top: 1px solid rgba(0, 71, 148, 0.1);
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  &__count {
+    padding-left: 10px;
+  }
+
+  &__weight {
+    padding-left: 20px;
+  }
 
 }

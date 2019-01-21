@@ -1,3 +1,59 @@
 mixin calculate()
   section.calculate
     table.calculate__body
+      tr.calculate__wrapper
+        td.calculate__type
+          p
+            label.calculate__label(for='type') Тип метизов
+          select(id='type' name='type')
+            option(value='')
+            option(value='Болт') Болт
+            option(value='Гайка') Гайка
+            option(value='Шайба') Шайба
+            option(value='Гровер') Гровер
+            option(value='Винт') Винт
+            option(value='Гвоздь') Гвоздь
+            option(value='Ось мебельная') Ось мебельная
+            option(value='Анкеры') Анкеры
+            option(value='Шуруп') Шуруп
+            option(value='Шплинт') Шплинт
+            option(value='Заклепка') Заклепка
+            option(value='Шпилька') Шпилька
+            option(value='Такелаж') Такелаж
+            option(value='Рым-крепеж') Рым-крепеж
+            option(value='Саморез') Саморез
+            option(value='Круг отрезной') Круг отрезной
+            option(value='Проволока') Проволока
+        td.calculate__type
+          p
+            label.calculate__label(for='din') Стандарт
+          select(id='din' name='din')
+        td.calculate__type
+          p
+            label.calculate__label(for='diam') Диаметр
+          select(id='diam' name='diam')
+        td.calculate__type
+          p
+            label.calculate__label(for='length') Длина
+          select(id='length' name='length')
+        td.calculate__type
+          p
+            label.calculate__label(for='typeCover') Тип покрытия
+          select(id='typeCover' name='typeCover')
+        td.calculate__type
+          p
+            label.calculate__label(for='classStrength') Класс прочности
+          select(id='classStrength' name='classStrength')
+        td.calculate__type
+          p
+            label.calculate__label(for='rate') Штук
+          input(type='number' id='rate' name='rate')
+        td.calculate__type
+          p
+            label.calculate__label(for='wight') Вес
+          input(type='text' id='wight' name='wight')
+        td.calculate__button
+          button.calculate__add(value='Добавить позицию') Добавить позицию
+    div.calculate__result Итого:
+      span.calculate__count 1000шт.
+      span.calculate__weight 0.600кг
