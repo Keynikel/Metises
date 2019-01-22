@@ -8,6 +8,16 @@
 
   padding: 50px 20px 60px;
 
+  @media (min-width: $screen-sm) {
+    padding-top: 55px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+  }
+
   &--production {
     padding-top: 65px;
     padding-bottom: 20px;
@@ -28,11 +38,29 @@
     font-size: 18px;
     line-height: 27px;
     text-transform: uppercase;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 16px;
+      grid-column: 1/2;
+      font-size: 26px;
+      line-height: 41px;
+    }
   }
 
   &__img {
+
+    @media (min-width: $screen-sm) {
+      grid-column: 2/3;
+      grid-row: 1/4;
+    }
+
     img {
       margin-bottom: 10px;
+
+      @media (min-width: $screen-sm) {
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -40,9 +68,28 @@
 
     margin-bottom: 35px;
 
+    @media (min-width: $screen-sm) {
+      margin-bottom: 15px;
+      grid-column: 1/2;
+    }
+
     p {
       margin-bottom: 20px;
     }
+  }
+
+  &__button {
+
+    @media (min-width: $screen-sm) {
+      margin-left: 0;
+      grid-column: 1/2;
+      width: 180px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: 400;
+    }
+
   }
 
 }

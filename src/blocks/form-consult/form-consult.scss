@@ -9,6 +9,12 @@
   padding: 40px 20px 50px;
   background-color: $main-color;
 
+  @media (min-width: $screen-sm) {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 54px 60px 60px;
+  }
+
   &--white {
     background-color: #fff;
 
@@ -24,10 +30,20 @@
     line-height: 30px;
     font-weight: 500;
     text-transform: uppercase;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
   }
 
   &__lead {
     margin-bottom: 23px;
+
+    @media (min-width: $screen-sm) {
+      width: 50%;
+      font-size: 13px;
+    }
   }
 
   &__item {
@@ -44,6 +60,14 @@
     padding: 4px 10px 6px 6px;
     font-size: 13px;
     line-height: 28px;
+  }
+
+  &__button {
+    @media (min-width: $screen-sm) {
+      margin-top: 27px;
+      margin-left: 0;
+      max-width: 140px;
+    }
   }
 
 }
