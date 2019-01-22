@@ -2,6 +2,8 @@ mixin slider()
   section.slider
     div.slider__item
       picture.slider__img
+        source(media='(min-width: 768px)' srcset='img/main-1--sm.webp' type='image/webp' )
+        source(media='(min-width: 768px)' srcset='img/main-1--sm.jpg' )
         source(srcset='/img/main-1--xs.webp' type='image/webp')
         img(src='/img/main-1--xs.jpg')
       div.slider__wrapper

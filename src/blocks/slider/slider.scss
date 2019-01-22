@@ -6,19 +6,58 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  //height: 600px;
+  height: 600px;
   padding-bottom: 40px;
   margin-bottom: 37px;
   background-color: rgba(243, 243, 243, 0.5);
 
-  &__img {
-    img {
-      min-height: 230px;
+  @media (min-width: $screen-sm) {
+    height: 360px;
+    padding-bottom: 0;
+    margin-bottom: 48px;
+  }
+
+  &__item {
+
+    @media (min-width: $screen-sm) {
+      position: relative;
     }
+
+  }
+
+  &__img {
+
+    img {
+      width: 100%;
+      min-height: 230px;
+      max-height: 350px;
+      object-fit: cover;
+
+      @media (min-width: $screen-sm) {
+        margin-right: 48px;
+        height: 360px;
+        max-height: none;
+        width: 56%;
+        margin-left: auto;
+      }
+    }
+
+
   }
 
   &__wrapper {
     padding: 35px 20px 40px;
+
+    @media (min-width: $screen-sm) {
+      position: absolute;
+      top: 33px;
+      left: 48px;
+      width: 45%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+
   }
 
   &__header {
@@ -26,10 +65,30 @@
     font-size: 22px;
     line-height: 30px;
     text-transform: uppercase;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 23px;
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   &__lead {
     margin-bottom: 30px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 25px;
+      max-width: 77%;
+    }
+  }
+
+  &__button {
+    @media (min-width: $screen-sm) {
+      font-size: 14px;
+      font-weight: 500;
+      max-width: 180px;
+      margin-left: 0;
+    }
   }
 
 
@@ -55,6 +114,27 @@
   .slick-dots li.slick-active button:before {
     background-color: $warning-color;
     opacity: 1;
+  }
+
+  .slick-prev,
+  .slick-next {
+    bottom: 0;
+    left: 9px;
+    right: unset;
+    background: none;
+    background-image: url('../img/arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  .slick-prev {
+    transform: rotate(180deg);
+  }
+
+  .slick-next {
+    left: unset;
+    right: 9px;
   }
 
 }

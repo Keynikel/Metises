@@ -1,7 +1,10 @@
 mixin header()
   section.header
-    button Menu
+    button.header__menu Menu
     a.header__wrapper.header__wrapper(href='/')
         svg.header__logo(width="120", height="47")
           use(xlink:href="img/sprite-svg.svg#logo")
-    button Search
+    a.header__search(href='#')
+      span.visually-hidden Найти
+      svg(width="21", height="21")
+        use(xlink:href="img/sprite-svg.svg#search")
