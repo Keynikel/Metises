@@ -3,6 +3,8 @@ mixin about(type)
     h3.about__header О компании
     - var src = "/img/about_" + type;
     picture.about__img
+      source(media='(min-width: 768px)' srcset = src + '--sm.webp' type='image/webp' )
+      source(media='(min-width: 768px)' srcset = src + '--sm.png' )
       source(srcset = src + '--xs.webp' type='image/webp')
       img(src= src + '--xs.jpg')
     div.about__lead
