@@ -12,6 +12,7 @@
   @media (min-width: $screen-sm) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px auto;
     column-gap: 20px;
     padding: 55px 50px 38px;
   }
@@ -24,6 +25,10 @@
   &--about,
   &--calculate {
     padding-bottom: 1px;
+
+    @media (min-width: $screen-sm) {
+      padding-bottom: 15px;
+    }
   }
 
   &__header {
@@ -35,7 +40,8 @@
 
     @media (min-width: $screen-sm) {
       grid-column: 1/2;
-      margin-bottom: -9px;
+      height: 60px;
+      margin-bottom: 0;
       font-size: 30px;
       line-height: 60px;
     }
@@ -62,6 +68,7 @@
     @media (min-width: $screen-sm) {
       grid-column: 1/2;
       grid-row: 2/3;
+      margin-top: 11px;
       margin-bottom: 0;
     }
 
