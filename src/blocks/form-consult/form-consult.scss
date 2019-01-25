@@ -18,9 +18,26 @@
   &--white {
     background-color: #fff;
 
+    @media (min-width: $screen-sm) {
+      padding-top: 36px;
+      padding-left: 0;
+    }
+
     #{$block-name}__name,
     #{$block-name}__phone {
       border: 1px solid #E7E7E7;
+
+      @media (min-width: $screen-sm) {
+        max-width: 460px;
+      }
+    }
+
+
+    #{$block-name}__header {
+      @media (min-width: $screen-sm)  {
+        font-size: 18px;
+
+      }
     }
   }
 

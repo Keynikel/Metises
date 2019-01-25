@@ -3,6 +3,19 @@ mixin footer()
     a.footer__wrapper(href='/')
         svg.footer__logo(width="120", height="50")
           use(xlink:href="img/sprite-svg.svg#logo")
+    ul.footer__menu
+      li.footer__link
+        a(href='/catalog.html') Каталог продукции
+      li.footer__link
+        a(href='/production.html') Производство
+      li.footer__link
+        a(href='/calculate.html') Калькулятор
+      li.footer__link
+        a(href='/delivery.html') Доставка
+      li.footer__link
+        a(href='/about.html') О компании
+      li.footer__link
+        a(href='/contacts.html') Контакты
     ul.footer__info
       li.footer__item
         a.footer__phone(href='tel:+78124073690') 8 (812) 407 36 90

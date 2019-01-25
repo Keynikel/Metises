@@ -18,6 +18,12 @@
     grid-column-gap: 80px;
   }
 
+  &--production {
+    @media (min-width: $screen-sm) {
+      background-color: #F9F9F9;
+    }
+  }
+
   &__header {
     margin-bottom: 10px;
     font-size: 18px;

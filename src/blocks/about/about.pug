@@ -1,5 +1,5 @@
 mixin about(type)
-  section.about
+  section.about(class = 'about--' + type)
     h3.about__header О компании
     - var src = "/img/about_" + type;
     picture.about__img

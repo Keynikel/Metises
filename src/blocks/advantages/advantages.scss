@@ -14,6 +14,8 @@
   background-repeat: no-repeat;
 
   @media (min-width: $screen-sm) {
+    background-image: url('../img/advantages.jpg');
+    background-position: top center;
     padding: 55px 50px 40px;
 
   }

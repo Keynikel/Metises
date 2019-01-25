@@ -26,9 +26,27 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    @media (min-width: $screen-sm) {
+      padding-bottom: 40px;
+      background-image: url('../img/back--sm.jpg');
+      background-position: top right;
+    }
+
     #{$block-name}__img {
       img {
         margin-bottom: 20px;
+      }
+
+      @media (min-width: $screen-sm) {
+        display: none;
+      }
+    }
+
+    #{$block-name}__header {
+      @media (min-width: $screen-sm) {
+        margin-bottom: 24px;
+        font-size: 24px;
+        line-height: 30px;
       }
     }
   }
