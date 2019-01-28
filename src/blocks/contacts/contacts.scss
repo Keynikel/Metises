@@ -12,14 +12,30 @@
   @media (min-width: $screen-sm) {
     padding: 66px 50px 37px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1.8fr 1fr;
     grid-template-rows: 60px auto;
-    grid-column-gap: 10px;
+    grid-column-gap: 80px;
   }
 
   &--page {
     padding-bottom: 36px;
     background-color: #fff;
+
+    @media (min-width: $screen-sm) {
+      grid-template-columns: 1fr 2fr;
+      grid-column-gap: 10px;
+    }
+
+    #{$block-name}__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      @media (min-width: $screen-sm) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+    }
   }
 
   &__header {
@@ -39,7 +55,9 @@
   &__lead {
     margin-bottom: 15px;
 
-
+    @media (min-width: $screen-sm) {
+      grid-column: 1/2;
+    }
   }
 
   &__map {
@@ -62,7 +80,8 @@
     list-style: none;
 
     @media (min-width: $screen-sm) {
-      grid-column: 1/2;
+      grid-column: 2/3;
+      grid-row: 3/5;
       padding-top: 0;
     }
   }

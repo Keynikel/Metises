@@ -76,7 +76,27 @@
     }
   }
 
+  &--calculate {
+    background-color: #fff;
 
+    #{$block-name}__name,
+    #{$block-name}__phone,
+    #{$block-name}__mail,
+    #{$block-name}__message {
+      border: 1px solid #E7E7E7;
+    }
+
+    @media (min-width: $screen-sm) {
+      background-color: #F9F9F9;
+
+      #{$block-name}__name,
+      #{$block-name}__phone,
+      #{$block-name}__mail,
+      #{$block-name}__message {
+        border-color: #ffffff;
+    }
+  }
+}
 
 
   &__header {
