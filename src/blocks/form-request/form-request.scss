@@ -22,7 +22,8 @@
     color: rgba(0, 0, 0, 0.7);
   }
 
-  &--white {
+  &--white,
+  &--catalog {
     background-color: #fff;
 
     #{$block-name}__name,
@@ -74,6 +75,8 @@
       }
     }
   }
+
+
 
 
   &__header {
