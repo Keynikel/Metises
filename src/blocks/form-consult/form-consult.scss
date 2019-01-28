@@ -41,6 +41,31 @@
     }
   }
 
+  &--delivery {
+
+    @media (min-width: $screen-sm) {
+      padding-top: 42px;
+      padding-left: 0;
+      background-color: #fff;
+    }
+
+    #{$block-name}__name,
+    #{$block-name}__phone {
+
+      @media (min-width: $screen-sm) {
+        border: 1px solid #E7E7E7;
+        max-width: 460px;
+      }
+    }
+
+    #{$block-name}__header {
+
+      @media (min-width: $screen-sm)  {
+        font-size: 18px;
+      }
+    }
+  }
+
   &__header {
     margin-bottom: 6px;
     font-size: 15px;

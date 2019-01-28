@@ -26,6 +26,7 @@
     background-color: #fff;
 
     #{$block-name}__name,
+    #{$block-name}__phone,
     #{$block-name}__mail,
     #{$block-name}__message {
       border: 1px solid #E7E7E7;
@@ -37,6 +38,41 @@
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
+
+    @media (min-width: $screen-sm) {
+      padding-top: 50px;
+      background-image: url('../img/back--sm.svg');
+    }
+
+    #{$block-name}__header {
+
+      @media (min-width: $screen-sm) {
+        font-size: 26px;
+        line-height: 39px;
+      }
+    }
+
+    #{$block-name}__lead {
+      @media (min-width: $screen-sm) {
+        padding-top: 7px;
+      }
+    }
+
+    #{$block-name}__item {
+      &:nth-of-type(4) {
+
+        @media (min-width: $screen-sm) {
+          margin-bottom: 25px;
+        }
+      }
+
+      &:last-of-type {
+
+        @media (min-width: $screen-sm) {
+          margin-top: 36px;
+        }
+      }
+    }
   }
 
 
@@ -96,7 +132,11 @@
   &__item {
     margin-bottom: 20px;
 
-    &:nth-of-type(3) {
+    @media (min-width: $screen-sm)  {
+      margin-bottom: 15px;
+    }
+
+    &:nth-of-type(4) {
       margin-bottom: 4px; // другой нижний отступ перед прикреплением файла
 
       @media (min-width: $screen-sm) {
@@ -116,7 +156,8 @@
   }
 
   &__name,
-  &__mail {
+  &__mail,
+  &__phone {
     width: 100%;
     padding: 6px 14px 5px 14px;
     font-size: 13px;
@@ -130,6 +171,10 @@
     padding-left: 15px;
     font-size: 13px;
     line-height: 28px;
+
+    @media (min-width: $screen-sm) {
+      height: 140px;
+    }
   }
 
   &__clip {
