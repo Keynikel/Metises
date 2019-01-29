@@ -17,6 +17,13 @@
     padding: 55px 50px 38px;
   }
 
+  @media (min-width: $screen-md) {
+    padding-top: 105px;
+    padding-bottom: 70px;
+    grid-template-rows: 105px auto;
+    column-gap: 35px;
+  }
+
   &--production {
     padding-bottom: 1px;
     background-color: #F9F9F9;
@@ -45,6 +52,10 @@
       font-size: 30px;
       line-height: 60px;
     }
+
+    @media (min-width: $screen-md) {
+      font-size: 40px;
+    }
   }
 
   &__img {
@@ -72,8 +83,18 @@
       margin-bottom: 0;
     }
 
-    p{
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    p {
       margin-bottom: 20px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 26px;
+      }
     }
   }
 

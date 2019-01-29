@@ -1,37 +1,38 @@
 mixin form-request(header, type)
   section.form-request(class= 'form-request--' + type)
     h3.form-request__header #{header}
-    if(type == 'striped')
-      div.form-request__lead
-        p Если у вас есть запрос на поставку продукции, деловое предложение или вопрос, напишите нам, позвоните или заполните форму обратной связи. 
-    else
-      div.form-request__lead.form-request__lead--main
-        p Мы гарантируем клиентам бесплатную доставку по Санкт-Петербургу собственным автопарком.
-        p Отправку в регионы осуществляем из собственного логистического центра.
-    form.form-requset__body
-      p.form-request__item
-        label.form-request__label.visually-hidden(for='request-name') Представьтесь
-        input.form-request__name(type='text' name='request-name' id='request-name' placeholder='Представьтесь')
+    div.form-request__wrapper
       if(type == 'striped')
+        div.form-request__lead
+          p Если у вас есть запрос на поставку продукции, деловое предложение или вопрос, напишите нам, позвоните или заполните форму обратной связи. 
+      else
+        div.form-request__lead.form-request__lead--main
+          p Мы гарантируем клиентам бесплатную доставку по Санкт-Петербургу собственным автопарком.
+          p Отправку в регионы осуществляем из собственного логистического центра.
+      form.form-requset__body
         p.form-request__item
-          label.form-request__label.visually-hidden(for='request-phone') Телефон
-          input.form-request__phone(type='tel' name='request-phone' id='request-phone' placeholder='Телефон')
-      p.form-request__item
-        label.form-request__label.visually-hidden(for='request-mail') Эл. почта
-        input.form-request__mail(type='email' name='request-mail' id='request-mail' placeholder='Эл. почта')
-      p.form-request__item
-        - var feedback = false
+          label.form-request__label.visually-hidden(for='request-name') Представьтесь
+          input.form-request__name(type='text' name='request-name' id='request-name' placeholder='Представьтесь')
         if(type == 'striped')
-          - feedback = true
-        label.form-request__label.visually-hidden(for='request-message') Детали заявки
-        textarea.form-request__message( name='request-message' id='request-message' placeholder=feedback ? 'Сообщение или вопрос' : 'Детали заказа')
-      p.form-request__item
-        label.form-request__label(for='request-files')
-          svg.form-request__clip(width="12", height="12")
-            use(xlink:href="img/sprite-svg.svg#clip")
-          span.form-request__text  Прикрепить файлы
-        input.form-request__file.visually-hidden(type='file' multiple name='request-files' id='request-files' placeholder='Прикрепить файлы')
-      p.form-request__item
-        input.form-request__check(type='checkbox' name='request-agree' id='request-agree')
-        label.form-request__agree(for='request-agree') Принимаю соглашение об использовании персональных данных
-      input.form-request__button.button(type='submit' value='Отправить')
+          p.form-request__item
+            label.form-request__label.visually-hidden(for='request-phone') Телефон
+            input.form-request__phone(type='tel' name='request-phone' id='request-phone' placeholder='Телефон')
+        p.form-request__item
+          label.form-request__label.visually-hidden(for='request-mail') Эл. почта
+          input.form-request__mail(type='email' name='request-mail' id='request-mail' placeholder='Эл. почта')
+        p.form-request__item
+          - var feedback = false
+          if(type == 'striped')
+            - feedback = true
+          label.form-request__label.visually-hidden(for='request-message') Детали заявки
+          textarea.form-request__message( name='request-message' id='request-message' placeholder=feedback ? 'Сообщение или вопрос' : 'Детали заказа')
+        p.form-request__item
+          label.form-request__label(for='request-files')
+            svg.form-request__clip(width="12", height="12")
+              use(xlink:href="img/sprite-svg.svg#clip")
+            span.form-request__text  Прикрепить файлы
+          input.form-request__file.visually-hidden(type='file' multiple name='request-files' id='request-files' placeholder='Прикрепить файлы')
+        p.form-request__item
+          input.form-request__check(type='checkbox' name='request-agree' id='request-agree')
+          label.form-request__agree(for='request-agree') Принимаю соглашение об использовании персональных данных
+        input.form-request__button.button(type='submit' value='Отправить')
